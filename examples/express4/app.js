@@ -15,7 +15,12 @@ app.use(express["static"](path.join(__dirname, 'public')));
 
 var uploder = new webUploader({uploadDir:path.join(__dirname, 'public','uploads'),limitExtension:null});
 uploder.mount(router);
-app.use('/upload',router);
+app.use('/upload',loginChecker,router);
+
+function loginChecker(req, res, next) {
+    //check user login
+    next();
+}
 
 app.get('/', function (req, res) {
     res.redirect('/index.html');
