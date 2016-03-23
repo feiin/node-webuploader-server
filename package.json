@@ -11,6 +11,11 @@
     "上传",
     "分块上传"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/feiin/node-webuploader-server.git"
+  },
+  "homepage": "https://github.com/feiin/node-webuploader-server",
   "author": "feiin",
   "license": "MIT",
   "dependencies": {
