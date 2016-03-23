@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express["static"](path.join(__dirname, 'public')));
 
-var uploder = new webUploader({});
+var uploder = new webUploader({uploadDir:path.join(__dirname, 'public','uploads'),limitExtension:null});
 uploder.mount(router);
 app.use('/upload',router);
 
