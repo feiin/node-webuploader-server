@@ -18,7 +18,7 @@ uploder.mount(router);
 app.use('/upload',router);
 
 app.get('/', function (req, res) {
-    res.send('Hello World!');
+    res.redirect('/index.html');
 });
 
 app.listen(3000, function () {
