@@ -20,7 +20,7 @@ $(document).ready(function () {
             mi.uploadService.callGet("filecheck?md5={md5}&size={size}&ext={ext}", { md5: md5, size: size,ext:ext }, function (data) {
                 if (data.exists) {
 
-                    file.path = data.Path;
+                    file.path = data.path;
                     uploader.skipFile(file);
                     task.reject();
                 } else {
@@ -117,11 +117,11 @@ $(document).ready(function () {
 
 
         }).on("uploadSuccess", function (file, data) {
-            if (data && data.Path) {
-                file.path = data.Path;
+            if(data && data.path) {
+                file.path = data.path;
             }
 
-
+            console.log('uploadSuccess',file,data);
 
         }).on("uploadComplete", function (file) {
 
@@ -131,7 +131,7 @@ $(document).ready(function () {
             $("#fileName").text(file.path);
 
             $("#uploadProgress2").hide();
-
+            console.log('uploadComplete',file);
 
             this.removeFile(file.id);
 
