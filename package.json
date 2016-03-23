@@ -1,0 +1,22 @@
+{
+  "name": "node-webuploader-server",
+  "version": "0.1.0",
+  "description": "webuploader server,支持分片、并发、秒传等",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "keywords": [
+    "webuploader",
+    "上传",
+    "分块上传"
+  ],
+  "author": "feiin",
+  "license": "MIT",
+  "dependencies": {
+    "async": "^2.0.0-rc.1",
+    "lodash": "^4.6.1",
+    "mkdir-p": "0.0.7",
+    "multer": "^1.1.0"
+  }
+}
