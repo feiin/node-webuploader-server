@@ -1,6 +1,6 @@
 var express = require('express');
 var bodyParser = require('body-parser');
-var webUploader = require('../../index');
+var webUploader = require('../../index');//require('node-webuploader-server');
 var path = require('path');
 
 var app = express();
@@ -13,7 +13,9 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express["static"](path.join(__dirname, 'public')));
 
-var uploder = new webUploader({uploadDir:path.join(__dirname, 'public','uploads'),limitExtension:null});
+var uploaderConfig = {uploadDir:path.join(__dirname, 'public','uploads'),limitExtension:null};
+
+var uploder = new webUploader(uploaderConfig);
 uploder.mount(router);
 app.use('/upload',loginChecker,router);
 
