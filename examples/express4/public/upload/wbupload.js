@@ -128,7 +128,7 @@ $(document).ready(function () {
 
             $("#uploadProgress2").find(".progress-bar").css({ "width": "100%" }).text("100%").removeClass("active");
 
-            $("#fileName").text(file.path + ".tmp");
+            $("#fileName").text(file.path);
 
             $("#uploadProgress2").hide();
 
