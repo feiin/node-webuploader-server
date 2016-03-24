@@ -1,7 +1,7 @@
 {
   "name": "node-webuploader-server",
   "version": "0.1.0",
-  "description": "webuploader server,支持分片、并发、秒传等",
+  "description": "webuploader server,大文件上传支持分片、并发、断点续传/秒传等",
   "main": "index.js",
   "scripts": {
     "test": "make test"
@@ -9,7 +9,8 @@
   "keywords": [
     "webuploader",
     "上传",
-    "分块上传"
+    "分块上传",
+    "断点续传"
   ],
   "repository": {
     "type": "git",

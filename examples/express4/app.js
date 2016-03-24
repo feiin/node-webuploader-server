@@ -1,6 +1,6 @@
 var express = require('express');
 var bodyParser = require('body-parser');
-var webUploader = require('../../index');//require('node-webuploader-server');
+var webUploader = require('node-webuploader-server');//require('../../index');
 var path = require('path');
 
 var app = express();
